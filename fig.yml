@@ -1,5 +1,5 @@
 tracker:
-  build: ./tracker
+  image: rail44/mogile-tracker
   ports:
     - "7001:7001"
   links:
@@ -7,7 +7,7 @@ tracker:
     - node
 
 node:
-  build: ./node
+  image: rail44/mogile-node
 
 db:
   image: orchardup/mysql
