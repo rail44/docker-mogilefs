@@ -1,0 +1,13 @@
+tracker:
+  build: ./tracker
+  ports:
+    - "7001:7001"
+  links:
+    - db
+    - node
+
+node:
+  build: ./node
+
+db:
+  image: orchardup/mysql
