@@ -5,5 +5,6 @@ mogdbsetup --yes --dbhost=$DB_1_PORT_3306_TCP_ADDR --dbname=mogilefs --dbuser=ro
 useradd -g nogroup -s /bin/false -d /var/mogdata mogilefs
 sudo -u mogilefs mogilefsd -c mogilefsd.conf
 mogadm host add stored --ip=$NODE_1_PORT_7500_TCP_ADDR --port=7500 --status=alive
+mogadm device add stored 1
 mogadm check
 tail -f /dev/null
