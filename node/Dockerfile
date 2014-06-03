@@ -3,8 +3,7 @@ RUN apt-get install -y cpanminus build-essential
 
 RUN cpanm install --force MogileFS::Server
 
-RUN mkdir /node
-RUN mkdir /node/device
+RUN mkdir -p /node/device/dev1
 WORKDIR /node
 ADD ./mogstored.conf /node/mogstored.conf
 EXPOSE 7500
